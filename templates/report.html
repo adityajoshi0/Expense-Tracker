@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Report</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center">Expense Report</h1>
+
+    <!-- Display sorted expenses -->
+    <h2>Sorted Expenses</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Category</th>
+                <th>Amount (₹)</th>  <!-- Updated to show currency -->
+                <th>Date</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for expense in sorted_expenses %}
+            <tr>
+                <td>{{ expense.category }}</td>
+                <td>₹{{ expense.amount }}</td>  <!-- Updated to show currency -->
+                <td>{{ expense.date }}</td>
+                <td>{{ expense.description }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Display total spent by category -->
+    <h2>Total Spent by Category</h2>
+    <ul class="list-group">
+        {% for category, total in total_spent_by_category.items() %}
+            <li class="list-group-item">{{ category }}: ₹{{ total }}</li>  <!-- Updated to show currency -->
+        {% endfor %}
+    </ul>
+
+<a href="/" class="btn btn-secondary mt-4">Back to Home</a>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

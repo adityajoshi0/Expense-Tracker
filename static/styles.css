@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(to bottom right, #2c3e50, #34495e);
+    color: #ecf0f1; /* Light text color for better contrast */
+}
+
+h1 {
+    color: #ecf0f1; /* Light color for headings */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white for table */
+    border-radius: 8px; /* Rounded corners for the table */
+}
+
+.table th {
+    text-align: center;
+    background-color: rgba(236, 240, 241, 0.2); /* Slightly lighter for headers */
+}
+
+.table th,
+.table td {
+    border: none; /* Remove borders for a cleaner look */
+}
+
+.table tr:hover {
+    background-color: rgba(236, 240, 241, 0.3); /* Highlight on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.table tr:hover td {
+    color: #2980b9; /* Change text color on hover */
+}
+
+.table td,
+.table th {
+    padding: 12px;
+}
+
+/* Add smooth transitions to input fields */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent input fields */
+    border: none; /* Remove default borders */
+    color: #ecf0f1; /* Light text color */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition for background and border color */
+}
+
+.form-control::placeholder {
+    color: #bdc3c7; /* Placeholder text color */
+}
+
+.form-control:focus {
+    outline: none; /* Remove default outline */
+    border-color: #3498db; /* Change border color on focus */
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly lighter on focus */
+}
+
+.btn-primary {
+    background-color: #2980b9; /* Custom button color */
+    border: none; /* Remove default borders */
+    transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.btn-primary:hover {
+    background-color: #3498db; /* Button hover color */
+}
+
+/* Add shadow effect to buttons */
+.btn {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
